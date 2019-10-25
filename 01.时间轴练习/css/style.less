@@ -1,0 +1,97 @@
+@lineColor: #adc5cf;
+@baseBackground: #00d2fc;
+@activeBackground: #009efa;
+* {
+  margin: 0;
+  padding: 0;
+}
+.timeLine {
+  margin: 5px 0 0 5px;
+  list-style: none;
+  border-left: 2px solid @lineColor;
+  padding-left: 20px;
+  box-sizing: border-box;
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid @lineColor;
+    background: white;
+    position: absolute;
+    left: -6px;
+  }
+  &::before {
+    top: -4px;
+  }
+  &::after {
+    bottom: -4px;
+  }
+  > li {
+    margin-top: 10px;
+    position: relative;
+    &::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background: #eee;
+      border-radius: 50%;
+      border: 2px solid @activeBackground;
+      position: absolute;
+      left: -25px;
+      top: 57%;
+    }
+    
+    > .bubble {
+        &:hover {
+      .cTime::before {
+          border-right: 10px solid @activeBackground;
+      }
+      .cText {
+        background: @activeBackground;
+        .content{
+            color: #fff;
+        }
+      }
+    }
+      position: relative;
+      cursor: pointer;
+      > .cTime {
+        font-size: 12px;
+        color: #666;
+        margin-bottom: 1px;
+        &::before {
+          content: "";
+          z-index: -1;
+          position: absolute;
+          left: -15px;
+          top: 50%;
+          width: 1px;
+          height: 1px;
+          border-top: 7px solid transparent;
+          border-bottom: 7px solid transparent;
+          border-left: 8px solid transparent;
+          border-right: 10px solid @baseBackground;
+        }
+      }
+      > .cText {
+        display: inline-block;
+        padding: 5px 8px;
+        border-radius: 6px;
+        background: @baseBackground;
+        transition: all 0.2s;
+        > .content {
+          font-size: 14px;
+          color: #333;
+        }
+      }
+    }
+  }
+}
+.box{
+    margin-left: 20px;
+    width: 200px;
+}
