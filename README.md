@@ -4,4 +4,9 @@
 
 ## 练习内容
 
-1. 时间轴练习    2019-10-25
+1. 时间轴练习 2019-10-25
+
+   [演示1]( https://0x3e5.github.io/webPractice/01.时间轴练习/index.html )
+
+   [演示2]( https://0x3e5.github.io/webPractice/01.时间轴练习/index2.html )
+
