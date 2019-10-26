@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container{
+        width: 197px;
+        height: 390px;
+        position: relative;
+        transform: rotate(-30deg) skew(40deg) scale(.8);
+        transition: .5s;
+        >img{
+            position: absolute;
+            transition: .5s;
+            width: 100%;
+        }
+        &:hover img:nth-of-type(5){
+            transform: translate(160px, -160px);
+            opacity: 1;
+        }
+        &:hover img:nth-of-type(4){
+            transform: translate(160px, -160px);
+            opacity: 1;
+        }
+        &:hover img:nth-of-type(3){
+            transform: translate(160px, -160px);
+            opacity: 1;
+        }
+        &:hover img:nth-of-type(2){
+            transform: translate(160px, -160px);
+            opacity: 1;
+        }
+    }
+}
