@@ -16,4 +16,4 @@
 
 3. 开关按钮练习 2019-10-27
 
-   [演示](https://0x3e5.github.io/webPractice/03.开关按钮练习/)
+   [演示](https://0x3e5.github.io/webPractice/03.开关按钮练习/index.html)
