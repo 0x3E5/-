@@ -17,3 +17,7 @@
 3. 开关按钮练习 2019-10-27
 
    [演示](https://0x3e5.github.io/webPractice/03.开关按钮练习/index.html)
+
+4. 进度条练习 2019-10-28
+
+   [演示](https://0x3e5.github.io/webPractice/04.进度条练习/index.html)
