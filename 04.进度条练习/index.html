@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>进度条练习</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="loadBox">
+        <div class="load-title">静态</div>
+        <div class="load-progress">75%</div>
+        <div class="load-bar">
+          <div class="load-level" style="width: 75%;"></div>
+        </div>
+      </div>
+      <div class="loadBox">
+          <div class="load-title">动态</div>
+          <div class="load-progress">0%</div>
+          <div class="load-bar">
+              <div class="load-level" style="width: 0%;"></div>
+          </div>
+      </div>
+    </div>
+  </body>
+  <script>
+      let prog = document.getElementsByClassName('load-progress')[1];
+      let level = document.getElementsByClassName('load-level')[1];
+      window.onload = function(){
+        let tag = 0;
+        let timer = setInterval(()=>{
+            if(tag<=100){
+                prog.innerHTML=tag+'%';
+                level.style.width = tag+'%';
+                tag+=1;
+            }else{
+                console.log('加载完成！');
+                clearInterval(timer);
+            }
+        },100);
+      }
+  </script>
+</html>
